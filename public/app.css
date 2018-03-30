@@ -1,0 +1,11 @@
+i.icon {
+    font-size: 2em;
+}
+
+#activ {
+    background-color: #E91E63;
+}
+
+#activo:active {
+    background-color: #E91E63;
+}

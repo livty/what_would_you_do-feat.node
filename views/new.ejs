@@ -1,0 +1,24 @@
+<% include ./partials/header %>
+    <div class="ui three item stackable menu">
+
+        <a href="/" id="activo" class="item">
+            <i class="world icon"></i>Doit</a>
+        <a href="/" id="activo" class="item">Home</a>
+        <a href="/chores/new" id="activ" class="item">New Post</a>
+
+    </div>
+    <div class="ui main text container green segment">
+        <h3>New Post</h3>
+        <form class="ui form" action="/chores" method="POST">
+
+            <div class="field">
+                <p>What would you do instead of a routine day task? </p>
+                <textarea name="chore[body]" required></textarea>
+            </div>
+
+            <button class="ui fluid clear green basic button" type="submit">Submit</button>
+        </form>
+    </div>
+
+
+    <% include ./partials/footer %>

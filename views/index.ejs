@@ -1,0 +1,43 @@
+<% include ./partials/header %>
+
+    <div class="ui three item stackable menu">
+
+        <a href="/" id="activo" class="item">
+            <i class="world icon"></i>Doit</a>
+        <a href="/" id="activ" class="item">Home</a>
+        <a href="/chores/new" id="activo" class="item">New Post</a>
+
+    </div>
+    <div class="ui container">
+        <div class="ui stackable padded centered grid">
+            <div class="eight wide column">
+                <h4>If you could do anything right now, what would you do?</h4>
+                <a class="ui green fluid floated button" href="/chores/new">Post your idea</a>
+                <h4>Some suggestions: </h4>
+                <p>Take the first flight to Lisbon</p>
+                <p>Go for a run </p>
+                <p>Go for a hike in Scotland </p>
+                <p>Take one of the shortest flights on the planet (from Westray to Papa Westray, 2min)</p>
+                <p>Book a dinner in some fancy place</p>
+                <p>Work and travel in Australia</p>
+                <p>Make a copy of Mona Lisa</p>
+            </div>
+
+            <div class="eight wide column">
+                <h4>Recent posts</h4>
+                <div class="ui grid">
+                    <% chores.forEach(function(chore){ %>
+                        <div class="four wide column">
+                            <span>
+                                <%= chore.created.getDate() + "." + (chore.created.getMonth() + 1) + "." + chore.created.getFullYear() %>
+                            </span>
+                        </div>
+                        <div class="ten wide column">
+                            <%=chore.body%>
+                        </div>
+                        <% }); %>
+                </div>
+            </div>
+        </div>
+    </div>
+    <% include ./partials/footer %>
